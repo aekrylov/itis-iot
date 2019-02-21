@@ -6,7 +6,7 @@
 [pygpio docs](http://abyz.me.uk/rpi/pigpio/python.html)
 
 ### pins
-![pins](https://i.stack.imgur.com/dzEcU.png)
+![pins](https://www.element14.com/community/servlet/JiveServlet/previewBody/73950-102-12-339300/pi3_gpio.png)
 
 
 ## Sensors
