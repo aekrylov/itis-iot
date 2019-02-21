@@ -6,7 +6,7 @@
 [pygpio docs](http://abyz.me.uk/rpi/pigpio/python.html)
 
 ### pins
-![pins](https://www.element14.com/community/servlet/JiveServlet/previewBody/73950-102-12-339300/pi3_gpio.png)
+![pins](https://docs.microsoft.com/en-us/windows/iot-core/media/pinmappingsrpi/rp2_pinout.png)
 
 
 ## Sensors
