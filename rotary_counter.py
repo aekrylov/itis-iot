@@ -25,14 +25,14 @@ class KY040:
         # GPIO.setup(switchPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
     def start(self):
-        self.clock_cb = pi.callback(self.clockPin, pigpio.FALLING_EDGE, self._clockCallback)
-        self.switch_cb = pi.callback(self.switchPin, pigpio.FALLING_EDGE, self._switchCallback)
+        self.clock_cb = pi.callback(self.clockPin, pigpio.FALLING_EDGE, self._clock_callback)
+        self.switch_cb = pi.callback(self.switchPin, pigpio.FALLING_EDGE, self._switch_callback)
 
     def stop(self):
         self.clock_cb.cancel()
         self.switch_cb.cancel()
 
-    def _clockCallback(self, gpio, level, tick):
+    def _clock_callback(self, gpio, level, tick):
         if pi.read(self.clockPin) == 0:
             data = pi.read(self.dataPin)
             if data == 1:
@@ -40,7 +40,7 @@ class KY040:
             else:
                 self.rotaryCallback(self.CLOCKWISE)
 
-    def _switchCallback(self, gpio, level, tick):
+    def _switch_callback(self, gpio, level, tick):
         if pi.read(self.switchPin) == 0:
             self.switchCallback()
 
@@ -53,18 +53,18 @@ if __name__ == "__main__":
 
     count = 0
 
-    def rotaryChange(direction):
+    def rotary_change(direction):
         global count
         print("turned - " + str(direction))
         count += -1 if direction else 1
         print('count = %d' % count)
 
 
-    def switchPressed():
+    def switch_pressed():
         print("button pressed")
 
     ky040 = KY040(CLOCKPIN, DATAPIN, SWITCHPIN,
-                  rotaryChange, switchPressed)
+                  rotary_change, switch_pressed)
 
     ky040.start()
 

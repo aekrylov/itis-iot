@@ -1,6 +1,6 @@
-from time import sleep
-
 import pigpio
+
+from time import sleep
 
 pi = pigpio.pi('10.42.0.157')  # PI host where pigpiod is running
 

@@ -1,6 +1,6 @@
-from time import sleep
-
 import pigpio
+
+from time import sleep
 
 from rotary_counter import KY040
 
@@ -30,7 +30,7 @@ def switch_pressed():
     global count
     print("button pressed")
     count = 0
-    pi.set_PWM_dutycycle(LASER_PIN, max(count, 0))
+    pi.set_PWM_dutycycle(LASER_PIN, count)
 
 
 ky040 = KY040(CLOCKPIN, DATAPIN, SWITCHPIN, rotary_change, switch_pressed)
