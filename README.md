@@ -17,4 +17,3 @@
 
 ### ky-040
 [Rotary encoder](https://tkkrlab.nl/wiki/Arduino_KY-040_Rotary_encoder_module)
-![rotary encoder](https://www.modmypi.com/image/catalog/tutorials/rotary-encoder/rotary-encoder_bb.png)
